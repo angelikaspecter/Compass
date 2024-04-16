@@ -67,9 +67,6 @@
     &.active {
         background-color: var(--light-primary);
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-        & .logo {
-            color: var(--middle-primary);
-        }
         & .nav__link {
             color: var(--middle-primary);
             &:hover {
@@ -79,9 +76,6 @@
     }
     &--blog {
         background-color: var(--light-primary);
-        & .logo {
-            color: var(--middle-primary);
-        }
         & .nav__item {
             &:nth-child(2) {
                 & .nav__link {
@@ -99,9 +93,6 @@
     &:hover {
         background-color: var(--light-primary);
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-        & .logo {
-            color: var(--middle-primary);
-        }
         & .nav__link {
             color: var(--middle-primary);
             &:hover {

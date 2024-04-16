@@ -166,7 +166,6 @@
 	transition: var(--transition-all);
 	margin-right: auto;
 	&.active {
-		color: var(--middle-primary);
 		transition: var(--transition-all);
 	}
 	&__img {

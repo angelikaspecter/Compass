@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compass Blog</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="assets/fancybox.css" />
+</head>
+
+<body>
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <header class="header header--blog" id="header">
+        <a class="logo" href="index.html" target="_self">
+            <img src="img/logo_dark.svg" width="130" height="25" alt="Compass logo" class="logo__img">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" target="_self" class="nav__link">Company</a>
+                </li>
+                <li class="nav__item">
+                    <a href="blog.html" target="_self" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#footer" class="nav__link">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="promo">
+            <h1 class="title title__main title__main--classic title__main--color">Blog</h1>
+            <p class="text">Now our blog is&nbsp;completely dedicated to&nbsp;helping Armed Forces of&nbsp;Ukraine</p>
+        </section>
+        <section class="gallery">
+            <a class="gallery__item" href="img/img_11.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_11.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_12.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_12.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_13.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_13.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_14.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_14.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_15.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_15.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_16.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_16.webp" />
+            </a>
+            <a class="gallery__item" href="img/img_17.webp" data-fancybox="gallery-a">
+                <img loading="lazy" class="gallery__img" src="img/img_17.webp" />
+            </a>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer__header">
+            <a class="logo" href="index.html">
+                <img src="img/logo_light.svg" width="130" height="25" alt="Compass logo" class="logo__img">
+            </a>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#header" class="footer__link">Company</a>
+                </li>
+                <li class="footer__item">
+                    <a href="blog.html" target="_self" class="footer__link">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <a href="" class="footer__site">www.example.com</a>
+        <p class="footer__text">Compass &copy;&nbsp;2015&nbsp;&mdash; 2024</p>
+        <p class="footer__text">KYIV, VOLODYMYRSKA ST. <br>
+            NEW LOCATION IS KONTRAKTOVA SQUARE, <br> KYIV, UKRAINE, 01033</p>
+        <p class="footer__text">
+            <a class="footer__tel" href="tel:+380630391392">+380 63 039 13 92</a> <br>
+            <a class="footer__tel" href="tel:+380939312935">+380 93 931 29 35</a>
+        </p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener('load', function () {
+                document.body.classList.add('loaded');
+            });
+
+            // При скроллинге страницы добавляем класс active к header, logo и nav__link
+            window.addEventListener("scroll", function () {
+                var header = document.querySelector(".header");
+                var logo = document.querySelector(".logo");
+                var navLinks = document.querySelectorAll(".nav__link");
+                var scrollPosition = window.scrollY;
+
+                if (scrollPosition > 100) {
+                    header.classList.add("active");
+                    logo.classList.add("active");
+                    navLinks.forEach(function (link) {
+                        link.classList.add("active");
+                    });
+                } else {
+                    header.classList.remove("active");
+                    logo.classList.remove("active");
+                    navLinks.forEach(function (link) {
+                        link.classList.remove("active");
+                    });
+                }
+
+            });
+
+            // При клике на ссылки Contacts происходит плавный скролл к футеру
+            var contactsLinks = document.querySelectorAll('a[href="#footer"]');
+            contactsLinks.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    var footer = document.getElementById("footer");
+                    window.scrollTo({
+                        top: footer.offsetTop,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // При клике на ссылки Company происходит плавный скролл к хедеру
+            var companyLinks = document.querySelectorAll('a[href="#header"]');
+            companyLinks.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    var header = document.querySelector(".header");
+                    window.scrollTo({
+                        top: header.offsetTop,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+        });
+    </script>
+    <script src="assets/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery-a"]', {
+            Carousel: {
+                infinite: false
+            }
+        });
+    </script>
+</body>
+
+</html>

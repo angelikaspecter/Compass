@@ -1,0 +1,57 @@
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/rubik/rubik-v28-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/rubik/rubik-v28-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/rubik/rubik-v28-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/rubik/rubik-v28-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/rubik/rubik-v28-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/rubik/rubik-v28-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-family: "Druk Text Wide Web Medium Regular";
+    src: url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.eot");
+    src: url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.svg#Druk Text Wide Web Medium Regular")format("svg");
+}

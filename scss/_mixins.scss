@@ -1,0 +1,180 @@
+@mixin btn {
+	border: 1px solid var(--light-primary);
+	padding: 12px 24px;
+	font-size: 12px;
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--light-primary);
+	transition: var(--transition-all);
+	&.active {
+		border: 1px solid var(--accedent-primary);
+		color: var(--accedent-primary);
+		transition: var(--transition-all);
+		&:hover,
+		:active,
+		:focus {
+			border: 1px solid var(--middle-primary);
+			color: var(--middle-primary);
+			transition: var(--transition-all);
+		}
+	}
+}
+
+@mixin btn-link {
+	padding: 1em 2em;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	color: var(--accident-color);
+	background: transparent;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: var(--tr-md);
+	border: none;
+	position: relative;
+	text-decoration: none;
+	@media (max-width: 359px) {
+		width: 100%;
+	}
+	@media (min-width: 360px) and (max-width: 505px) {
+		width: 100%;
+	}
+	i {
+		margin-left: 0.25em;
+	}
+	&:hover {
+		color: var(--accident-color);
+		& i {
+			padding-left: 0.25em;
+			transition: 0.4s ease-in-out;
+		}
+	}
+}
+
+@mixin link {
+	font-size: 15px;
+	font-family: var(--font-primary);
+	color: var(--light-primary);
+	text-decoration: none;
+	padding: 5px 0;
+	border-bottom: 2px solid transparent;
+	transition: var(--transition-all);
+	&.active {
+		color: var(--middle-primary);
+		&:hover {
+			color: var(--middle-primary);
+			border-bottom: 2px solid var(--accedent-primary);
+			transition: var(--transition-all);
+		}
+	}
+}
+
+@mixin site {
+	font-size: 12px;
+	font-family: var(--font-primary);
+	color: var(--light-secondary);
+	text-decoration: none;
+	padding: 5px 0;
+	border-bottom: 2px solid transparent;
+	transition: var(--transition-all);
+	&.active {
+		color: var(--middle-primary);
+		&:hover {
+			color: var(--middle-primary);
+			border-bottom: 2px solid var(--accedent-primary);
+			transition: var(--transition-all);
+		}
+	}
+}
+
+@mixin h1 {
+	font-size: 6vw;
+	color: var(--light-primary);
+	font-family: var(--font-secondary);
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	&--classic {
+		text-align: start;
+	}
+	&--right {
+		margin-left: 15%;
+	}
+	&--color {
+		color: var(--accedent-primary);
+	}
+	@media (max-width: 767.98px) {
+		font-size: 8vw;
+	}
+}
+
+@mixin h2 {
+	font-size: 32px;
+	color: var(--accedent-primary);
+	font-family: var(--font-secondary);
+	line-height: 1;
+	text-transform: uppercase;
+	@media (max-width: 767.98px) {
+		font-size: 24px;
+	}
+}
+
+@mixin h3 {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--middle-primary);
+	font-family: var(--font-primary);
+	line-height: 1;
+	text-transform: uppercase;
+	@media (max-width: 767.98px) {
+		font-size: 18px;
+	}
+}
+
+@mixin text {
+	font-size: 16px;
+	font-family: var(--font-primary);
+	color:var(--middle-primary);
+}
+
+@mixin text-small {
+	font-size: 13px;
+	font-family: var(--font-primary);
+	color:var(--middle-primary);
+}
+
+@mixin text-big {
+	font-size: 32px;
+	font-family: var(--font-primary);
+	color:var(--middle-primary);
+	@media (min-width: 578px) and (max-width: 991.98px) {
+        font-size: 28px;
+    }
+	@media (max-width: 577.98px) {
+        font-size: 24px;
+    }
+}
+
+@mixin logo {
+	display: flex;
+	justify-content: flex-start;
+	width: 100px;
+	height: 25px;
+	transition: var(--transition-all);
+	margin-right: auto;
+	&.active {
+		color: var(--middle-primary);
+		transition: var(--transition-all);
+	}
+	&__img {
+        width: 100%;
+		height: 100%;
+		object-fit: contain;
+    }
+	@media (max-width: 577.98px) {
+		font-size: 18px;
+	}
+}

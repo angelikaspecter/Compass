@@ -1,0 +1,18 @@
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--light-secondary) !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--light-secondary);
+    border-radius: 20px;
+    border: 3px solid var(--accedent-primary);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accedent-primary) var(--light-secondary);
+}

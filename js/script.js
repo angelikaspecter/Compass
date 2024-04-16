@@ -2,32 +2,44 @@ document.addEventListener("DOMContentLoaded", function () {
     var header = document.querySelector(".header");
     var logoImg = document.querySelector('.logo__img');
     var logo = document.querySelector(".logo");
+    var headerBlog = document.querySelector('.header--blog');
 
     window.addEventListener('load', function () {
         document.body.classList.add('loaded');
     });
 
     header.addEventListener('mouseenter', function () {
-        // Меняем src изображения на dark версию
-        logoImg.src = 'img/logo_dark.svg';
+        // Меняем src изображения на dark версию, только если не происходит скроллинг
+        if (window.scrollY <= 100) {
+            logoImg.src = 'img/logo_dark.svg';
+        }
+        header.classList.add("shadow");
     });
 
     header.addEventListener('mouseleave', function () {
         // Возвращаем src изображения на light версию, только если не происходит скроллинг
         if (window.scrollY <= 100) {
             logoImg.src = 'img/logo_light.svg';
+            header.classList.remove("shadow");
+            if (!headerBlog.matches(':hover') & !logo.matches(':hover')) {
+                logoImg.src = 'img/logo_dark.svg';
+            }
         }
     });
 
     logo.addEventListener('mouseenter', function () {
-        // Меняем src изображения на dark версию
-        logoImg.src = 'img/logo_dark.svg';
+        // Меняем src изображения на dark версию, только если не происходит скроллинг
+        if (window.scrollY <= 100) {
+            logoImg.src = 'img/logo_dark.svg';
+        }
+        header.classList.add("shadow");
     });
 
     logo.addEventListener('mouseleave', function () {
         // Возвращаем src изображения на light версию, только если не происходит скроллинг
         if (window.scrollY <= 100) {
-            logoImg.src = 'img/logo_light.svg';
+            logoImg.src = 'img/logo_dark.svg';
+            header.classList.remove("shadow");
         }
     });
 
@@ -35,8 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
         var navLinks = document.querySelectorAll(".nav__link");
         var scrollPosition = window.scrollY;
 
+        if (window.scrollY > 0) {
+            header.classList.add('shadow');
+        } else {
+            header.classList.remove('shadow');
+        }
+
         if (scrollPosition > 100) {
-            header.classList.add("active");
+            header.classList.add("active", "shadow");
             navLinks.forEach(function (link) {
                 link.classList.add("active");
             });
@@ -47,12 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.forEach(function (link) {
                 link.classList.remove("active");
             });
-            // Если не происходит скроллинга и нет события наведения на header или logo, возвращаем src на light версию
-            if (!header.matches(':hover') && !logo.matches(':hover')) {
+            // Если не происходит скроллинга и нет события наведения на header и logo, возвращаем src на light версию
+            if (!header.matches(':hover') & !logo.matches(':hover')) {
                 logoImg.src = 'img/logo_light.svg';
             }
+            if (!headerBlog.matches(':hover') & !logo.matches(':hover')) {
+                logoImg.src = 'img/logo_dark.svg';
+            }
+            header.classList.remove("shadow");
         }
     });
+
 
     // При клике на ссылки Contacts происходит плавный скролл к футеру
     var contactsLinks = document.querySelectorAll('a[href="#footer"]');

@@ -55,7 +55,7 @@
 }
 
 @mixin link {
-	font-size: 15px;
+	font-size: 16px;
 	font-family: var(--font-primary);
 	color: var(--light-primary);
 	text-decoration: none;
@@ -141,7 +141,7 @@
 }
 
 @mixin text-small {
-	font-size: 13px;
+	font-size: 14px;
 	font-family: var(--font-primary);
 	color:var(--middle-primary);
 }

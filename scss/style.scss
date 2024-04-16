@@ -629,9 +629,6 @@
     &__link {
         @include link;
     }
-    &__site {
-        @include site;
-    }
     &__text {
         @include text-small;
         font-size: 12px;
